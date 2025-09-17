@@ -13,4 +13,9 @@
       Quando eu consulto o token gerado
       Então o status devera ser 200
 
+    Cenário: confirma se usuario esta autorizado
+      Dado que eu acesso a API de Authorized
+      Quando eu consulto o com sucesso
+      Então o status devera ser true
+
 
