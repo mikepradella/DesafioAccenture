@@ -3,6 +3,10 @@ package pages;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 import static pages.ScrollUtils.scrollToElement;
 
@@ -56,9 +60,10 @@ public class FormularioPage {
     }
 
     public void fecharPopup() {
+        ((JavascriptExecutor) driver).executeScript("document.body.style.zoom='50%'");
         scrollToElement(driver,botaoFecharPopup);
         //Isso ignora interferências visuais e força o clique diretamente no DOM.
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", botaoFecharPopup);
-        botaoFecharPopup.click();
+        driver.quit();
     }
 }

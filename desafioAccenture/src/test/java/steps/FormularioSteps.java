@@ -40,6 +40,7 @@ public class FormularioSteps {
     @E("fecho o popup")
     public void fecharPopup() {
         formularioPage.fecharPopup();
+
     }
 
 
